@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx codeceptjs run --verbose"
+    "test": "npx codeceptjs run --steps",
+    "test_verbose": "npx codeceptjs run --verbose"
   },
   "keywords": [],
   "author": "",

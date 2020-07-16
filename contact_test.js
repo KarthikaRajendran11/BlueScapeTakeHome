@@ -45,3 +45,11 @@ Scenario('Leave out required field - date', (I, contactPage) => {
    contactPage.submitForm();
    I.seeInCurrentUrl('/contact');
 });
+
+Scenario('Test Go back option', (I, contactPage) => {
+   contactPage.fillAllFields();
+   contactPage.submitForm();
+   I.seeInCurrentUrl('/contact/?contact-form-id=7');
+   I.click('go back');
+   I.seeInCurrentUrl('/contact');
+});
